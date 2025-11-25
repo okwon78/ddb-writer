@@ -14,8 +14,8 @@ pip install ddb_writer
 from ddb_writer import DynamoDBWriter
 
 # Example usage
-# df = ... # Your PySpark DataFrame
-# write_capacity = 100 # 사용할 write capacity
-# with DynamoDBWriter("your-table-name", write_capacity) as writer:
-#     writer.write_dynamodb(df)
+df = spark.read.parquet("/Users/obiwan/Dev/DDB/data.parquet") # Your PySpark DataFrame
+write_capacity = 1000 # write capacity to be used
+with DynamoDBWriter("dynamodb-table-name", write_capacity) as writer:
+    writer.write_dynamodb(df)
 ```
