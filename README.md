@@ -2,10 +2,24 @@
 
 A utility class for writing data to Amazon DynamoDB, designed to work with PySpark DataFrames.
 
+## Prerequisites
+
+This package requires `pyspark` to be installed in your environment. It does not install `pyspark` automatically to allow using the cluster's provided version.
+
 ## Installation
 
+### From GitHub
+
 ```bash
-pip install ddb_writer
+pip install git+https://github.com/okwon78/ddb-writer.git
+```
+
+### From Source (Development)
+
+```bash
+git clone https://github.com/okwon78/ddb-writer.git
+cd ddb-writer
+pip install -e .
 ```
 
 ## Usage
